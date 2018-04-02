@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+  <title>Crystals Collector</title>
+
+  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-4">
+
+        <div class="header">
+          <h1 class="title">Crystals Collector!</h1>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="instructions">
+
+          <p>You will be given a random number at the start of the game.</p>
+
+          <p>There are four crystals below. By clicking on a crystal you will add a specific amount of rupees to your wallet. </p>
+
+          <p>You win the game by matching your total amount of crystals to the random number, you lose the game if your total amount of crystals goes above the random number.</p>
+
+          <p>The value of each crystal is hidden from you until you click on it. </p>
+
+          <p>Each time the game starts, the game will change the values of each crystal. </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row" id="checkline">
+
+      <div class="randomnumber"></div>
+
+      <div class="winslosses">
+        <p class="wins"></p>
+        <p class="losses"></p>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+
+      <button id="button1" class="crystal"><img src="assets/images/green_crystal.png" ></button>
+
+      <button id="button1" class="crystal"><img src="assets/images/red_crystal.jpg" ></button>
+
+      <button id="button1" class="crystal"><img src="assets/images/purple_crystal.jpg"></button>
+
+      <button id="button1" class="crystal"><img src="assets/images/yellow_crystal.jpg"></button>
+
+    </div>
+
+    <div class="info">
+
+    </div>
+
+    <div class="score">
+
+    </div>
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="assets/js/game.js"></script>
+
+</body>
+
+</html>
