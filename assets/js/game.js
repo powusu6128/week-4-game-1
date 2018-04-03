@@ -14,9 +14,7 @@ function resetgame() {
 
       crystals_Numbers[i] = Math.floor(Math.random() * 12) + 1;
 
-
-       console.log(crystals_Numbers[i]);
-
+       console.log("i: "+ i + " crystals_Numbers[i]: ",crystals_Numbers[i]);
     }
 
     randomnumber = Math.floor(Math.random() * 102) + 19;
@@ -60,7 +58,7 @@ function checkscore() {
 
 $(document).ready(function() {
 
-  $(".Crystals").on("click", function() {
+  $("#button1").on("click", function() {
 
     score = score + crystals_Numbers[0];
     $(".score").text(crystals_Numbers[0]);
@@ -68,14 +66,14 @@ $(document).ready(function() {
 
   });
 
-  $(".crystal").on("click", function() {
+  $("#button2").on("click", function() {
 
     score = score + crystals_Numbers[1];
     $(".score").text(crystals_Numbers[1]);
     checkscore();
   });
 
-  $(".crystal").on("click", function() {
+  $("#button3").on("click", function() {
 
     score = score + crystals_Numbers[2];
     $(".score").text(crystals_Numbers[2]);
@@ -83,7 +81,7 @@ $(document).ready(function() {
 
   });
 
-  $(".crytal").on("click", function() {
+  $("#button4").on("click", function() {
 
     score = score + crystals_Numbers[3];
     $(".score").text(crystals_Numbers[3]);
