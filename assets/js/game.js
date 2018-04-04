@@ -25,6 +25,11 @@ function resetgame() {
 
 }
 
+function initializer(score, rendom, crystal){
+  $(".score" + 0 + ".randomnumber"+ randomnumber+ ".crystal", crystals_Number);
+  // $(".randomnumber", randomnumber);".crystal", crystals_Number
+  // $(".crystal", crystals_Numbers);
+}
 function updatescreen() {
 
   $(".info").text("Your total score: " + score);
@@ -93,5 +98,7 @@ $(document).ready(function() {
   $(".instructions").scroll();
 
   resetgame();
+
+  initializer();
 
 })
