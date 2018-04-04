@@ -6,6 +6,8 @@ body {
   background-size: cover;
   background: url(../images/got-bg-02.jpg);
   font-size: 18px;
+  margin: 0px;
+  padding: 0px;
 }
 
 * {

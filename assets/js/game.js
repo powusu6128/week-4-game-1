@@ -32,6 +32,7 @@ function updatescreen() {
   $(".randomnumber").text(randomnumber);
 
   $(".wins").text("Wins: " + wins);
+
   $(".losses").text("Losses: " + losses);
 
 }
