@@ -2,34 +2,37 @@ var wins = 0;
 
 var losses = 0;
 
+var currentValue = 0;
+
 var randomnumber;
+
+var playing;
 
 var score = 0;
 
+// link to the audio file
+var audioElement = document.createElement("audio");
+audioElement.setAttribute("src", "assets/music/Theme.mp3");
+
 var crystals_Numbers = [0, 0, 0, 0];
 
-function resetgame() {
+function reset() {
 
-    for (var i = 0; i < crystals_Numbers.length; i++) {
+  for (var i = 0; i < crystals_Numbers.length; i++)
 
-      crystals_Numbers[i] = Math.floor(Math.random() * 12) + 1;
+    crystals_Numbers[i] = Math.floor(Math.random() * 12) + 1;
 
-       console.log("i: "+ i + " crystals_Numbers[i]: ",crystals_Numbers[i]);
-    }
 
-    randomnumber = Math.floor(Math.random() * 102) + 19;
+  randomnumber = Math.floor(Math.random() * 102) + 19;
 
-    score = 0;
+  score = 0;
 
-    updatescreen();
+  currentValue =0;
+
+  updatescreen();
 
 }
 
-function initializer(score, rendom, crystal){
-  $(".score" + 0 + ".randomnumber"+ randomnumber+ ".crystal", crystals_Number);
-  // $(".randomnumber", randomnumber);".crystal", crystals_Number
-  // $(".crystal", crystals_Numbers);
-}
 function updatescreen() {
 
   $(".info").text("Your total score: " + score);
@@ -40,6 +43,10 @@ function updatescreen() {
 
   $(".losses").text("Losses: " + losses);
 
+  $(".score").text(currentValue);
+
+  //play audio when game is in progress.
+  currentValue>0? audioElement.play():audioElement.pause();
 }
 
 function checkscore() {
@@ -48,14 +55,13 @@ function checkscore() {
 
     losses++;
 
-    resetgame();
+    reset();
 
   } else if (score === randomnumber) {
 
     wins++;
 
-    resetgame();
-
+    reset();
   }
 
   updatescreen();
@@ -66,39 +72,54 @@ $(document).ready(function() {
 
   $("#button1").on("click", function() {
 
-    score = score + crystals_Numbers[0];
-    $(".score").text(crystals_Numbers[0]);
+    currentValue = crystals_Numbers[0];
+
+    score += currentValue;
+
+    $(".info").text(score);
+
     checkscore();
 
   });
 
   $("#button2").on("click", function() {
 
-    score = score + crystals_Numbers[1];
-    $(".score").text(crystals_Numbers[1]);
+    currentValue = crystals_Numbers[1]
+
+    score += currentValue;
+
+    $(".info").text(score);
+
     checkscore();
+
   });
 
   $("#button3").on("click", function() {
 
-    score = score + crystals_Numbers[2];
-    $(".score").text(crystals_Numbers[2]);
+    currentValue = crystals_Numbers[2];
+
+    score += currentValue;
+
+    $(".info").text(score);
+
     checkscore();
 
   });
 
   $("#button4").on("click", function() {
 
-    score = score + crystals_Numbers[3];
-    $(".score").text(crystals_Numbers[3]);
+    currentValue = crystals_Numbers[3];
+
+    score += currentValue;
+
+    $(".info").text(score);
+
     checkscore();
 
   });
-
+  // insert a scroll pane to populate pages
   $(".instructions").scroll();
 
-  resetgame();
-
-  initializer();
+  reset();
 
 })

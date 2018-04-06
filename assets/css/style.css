@@ -1,13 +1,15 @@
 body {
   font-family: 'Alegreya Sans', sans-serif;
-  color: #000;
+  /* color: #000; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background: url(../images/got-bg-02.jpg);
   font-size: 18px;
-  margin: 0px;
+  margin: 0px auto !important;
   padding: 0px;
+  width:600px;
+  width:fix-content;
 }
 
 * {
@@ -15,9 +17,10 @@ body {
 }
 
 .container {
-  color: #000;
+  /* color: #000; */
 
   margin: 0px auto;
+  width:fix-content;
 
   font-family: 'Alegreya Sans', sans-serif;
 }
